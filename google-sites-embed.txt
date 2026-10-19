@@ -1,0 +1,10 @@
+<!-- Replace the example address with your actual published hosting URL. -->
+<iframe
+  src="https://YOUR-USERNAME.github.io/indus-trader/"
+  title="Indus Trader"
+  width="100%"
+  height="700"
+  style="border:0;"
+  allow="autoplay; fullscreen"
+  allowfullscreen>
+</iframe>

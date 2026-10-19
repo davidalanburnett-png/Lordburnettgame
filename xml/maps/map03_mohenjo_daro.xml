@@ -1,0 +1,384 @@
+<data>
+	<map id="3" location="mohenjo_daro" />
+	<script>
+    
+    
+		<startup>
+			<actions>
+				
+				<!--  We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="kid" definition="bbc.indusvalley.game.characters.npc.Kid" />
+					<action type="createNonPlayableCharacter" characterName="monkey" definition="bbc.indusvalley.game.characters.npc.Monkey" />
+					<action type="createNonPlayableCharacter" characterName="guard1" definition="bbc.indusvalley.game.characters.npc.GateKeeper1" />
+					<action type="createNonPlayableCharacter" characterName="rhinoSealTrader" definition="bbc.indusvalley.game.characters.npc.Woman1" />
+					<action type="createNonPlayableCharacter" characterName="priest" definition="bbc.indusvalley.game.characters.npc.Priest" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader1" definition="bbc.indusvalley.game.characters.npc.Man4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader2" definition="bbc.indusvalley.game.characters.npc.Man2" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader3" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader4" definition="bbc.indusvalley.game.characters.npc.Woman3" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader5" definition="bbc.indusvalley.game.characters.npc.Man4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader6" definition="bbc.indusvalley.game.characters.npc.Woman5" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader7" definition="bbc.indusvalley.game.characters.npc.Woman1" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader8" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader9" definition="bbc.indusvalley.game.characters.npc.Man4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader10" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader11" definition="bbc.indusvalley.game.characters.npc.Man3" />
+					
+				<!--  We then teleport them to there position on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="20" y="1" />
+					<action type="teleportCharacter" characterName="kid" x="16" y="3" />	
+					<action type="teleportCharacter" characterName="guard1" x="4" y="9" />
+					<action type="teleportCharacter" characterName="monkey" x="6" y="13" />
+					<action type="teleportCharacter" characterName="priest" x="7" y="9" />
+					<action type="teleportCharacter" characterName="rhinoSealTrader" x="19" y="1" />
+					<action type="teleportCharacter" characterName="stallTrader1" x="22" y="2" />
+					<action type="teleportCharacter" characterName="stallTrader2" x="22" y="6" />
+					<action type="teleportCharacter" characterName="stallTrader3" x="22" y="9" />
+					<action type="teleportCharacter" characterName="stallTrader4" x="22" y="13" />
+					<action type="teleportCharacter" characterName="stallTrader5" x="22" y="16" />
+					<action type="teleportCharacter" characterName="stallTrader6" x="22" y="20" />
+					<action type="teleportCharacter" characterName="stallTrader7" x="19" y="19" />	
+					<action type="teleportCharacter" characterName="stallTrader8" x="19" y="15" />
+					<action type="teleportCharacter" characterName="stallTrader9" x="19" y="12" />
+					<action type="teleportCharacter" characterName="stallTrader10" x="19" y="9" />
+					<action type="teleportCharacter" characterName="stallTrader11" x="19" y="6" />
+
+				<!--  Then set the direction they will be facing -->	
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="rhinoSealTrader" directionToFace="right"/>	
+					<action type="characterChangeDirection" characterName="monkey" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="guard1" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="priest" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="kid" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader1" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader2" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader3" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader4" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader5" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader6" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader7" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader8" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader9" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader10" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader11" directionToFace="right"/>	
+					
+				<!-- We then update tiles on the map -->	
+					<action type="updateMapTile" x="7" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="4" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="13" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="22" y="2" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="22" y="6" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="22" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="22" y="13" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="22" y="16" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="22" y="20" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="19" y="20" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="19" y="15" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="19" y="12" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="19" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="19" y="6" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="19" y="1" walkable="true" blocked="true" cost="999" />
+				
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="56" showPulse="false"/>
+					<action type="showCutscene" cutsceneName="cutscene07" />
+				
+				<!--  We then set the property flags for the dialog conversations -->
+					<action type="createProperty" propertyName="foundMonkey" value="false" />
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="60" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Mohenjo-Daro is 50%"/>
+					<action type="updateGameLocation" city="mohenjo_daro" location="You are currently in the City of Mohenjo-Daro"/>		
+					
+				<!-- We then setup the hint's and support panel information (Mohenjo-Daro) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="complete" text="Talk to the gate keepers to enter the City of Mohenjo-Daro." />	
+					<action type="setHintAndTips" slot="2" visible="true" progress="complete" text="Talk to the local resident about his broken toilet." />	
+					<action type="setHintAndTips" slot="3" visible="true" progress="complete" text="Find and talk to the toilet cleaner about fixing the broken toliet." />
+					<action type="setHintAndTips" slot="4" visible="true" progress="complete" text="Find your way to the market by going through the middle walkway." />
+					<action type="setHintAndTips" slot="5" visible="true" progress="complete" text="Talk to a trader with the rhino seal at the top of the market." />	
+					<action type="setHintAndTips" slot="6" visible="true" progress="complete" text="Help the kid find his lost monkey." />
+					<action type="setHintAndTips" slot="7" visible="true" progress="none" text="Talk to the monkey to pick him up." />	
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />					
+				
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="bread" />
+					<action type="setInventory" slot="5" item="tigerSeal" />
+					<action type="setInventory" slot="6" item="meat" />
+					<action type="setInventory" slot="7" item="goatPoo" />
+					<action type="setInventory" slot="8" item="rhinoSeal" />
+					<action type="setInventory" slot="9" item="knife"/>
+					<action type="setInventory" slot="10" item="bangles" />
+					<action type="setInventory" slot="11" item="empty" />
+					<action type="setInventory" slot="12" item="empty" />
+					<action type="setInventory" slot="13" item="empty" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />
+		
+				<!-- We then get the kid to  talk to the hero-->
+					<action type="characterGotoTile" characterName="kid" x="20" y="2" />
+					<action type="characterChangeDirection" characterName="kid" directionToFace="up"/>
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="down"/>
+					<action type="characterConversation" characterName="kid" />
+					<action type="characterGotoTile" characterName="kid" x="18" y="3" />
+					<action type="characterChangeDirection" characterName="kid" directionToFace="down"/>
+					<action type="updateMapTile" x="18" y="3" walkable="true" blocked="true" cost="999" />	
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="63" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Mohenjo-Daro is 60%"/>	
+					
+				<!-- We then set the path's for the first resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident1" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="addPointToRoute" characterName="resident1" x="6" y="15" delay="0.25"/>
+					<action type="addPointToRoute" characterName="resident1" x="8" y="15" delay="0.25"/>
+					<action type="addPointToRoute" characterName="resident1" x="8" y="17" delay="0.25"/>
+					<action type="addPointToRoute" characterName="resident1" x="6" y="17" delay="0.25"/>
+					<action type="teleportCharacter" characterName="resident1" x="6" y="17" />
+					<action type="startRoute" characterName="resident1"/>
+					
+				<!-- We then set the path's for the second resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident2" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="addPointToRoute" characterName="resident2" x="7" y="1" delay="0.25"/>
+					<action type="addPointToRoute" characterName="resident2" x="8" y="7" delay="0.25"/>
+					<action type="teleportCharacter" characterName="resident2" x="8" y="7" />
+					<action type="startRoute" characterName="resident2"/>
+					
+				<!-- We then set the path's for the third resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident3" definition="bbc.indusvalley.game.characters.npc.Man3" />
+					<action type="addPointToRoute" characterName="resident3" x="12" y="17" delay="0.25"/>
+					<action type="addPointToRoute" characterName="resident3" x="24" y="18" delay="0.25"/>
+					<action type="teleportCharacter" characterName="resident3" x="24" y="18" />
+					<action type="startRoute" characterName="resident3"/>
+					
+				<!-- We then set the path's for the fouth resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident4" definition="bbc.indusvalley.game.characters.npc.Woman5" />
+					<action type="addPointToRoute" characterName="resident4" x="12" y="11" delay="0.25"/>
+					<action type="addPointToRoute" characterName="resident4" x="24" y="11" delay="0.25"/>
+					<action type="teleportCharacter" characterName="resident4" x="24" y="11" />
+					<action type="startRoute" characterName="resident4"/>		
+					
+			</actions>
+		</startup>
+        
+        
+		<characters>
+			
+			<character name="priest">
+				<dialogue id="1" name="Priest" color="">
+					<option jumpId="">
+						<text><![CDATA[I held the special ceremony to the gods for the grain harvest yesterday, it was a great success!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="monkey">
+				<dialogue id="1" name="Monkey" color="">
+					<option jumpId="2">
+						<text><![CDATA[Ooooh oohhh aaaah aaahhhh!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="">
+						<text><![CDATA[There is that monkey, I am going to pick him up and return him to his owner.]]></text>
+						<actions>
+							<action type="setHintAndTips" slot="7" visible="true" progress="complete" text="Talk to the monkey to pick him up." />
+							<action type="setHintAndTips" slot="8" visible="true" progress="none" text="Return the lost monkey to the kid nearby." />
+							<action type="updateMapTile" x="17" y="3" walkable="true" blocked="true" cost="999" />
+							<action type="teleportCharacter" characterName="kid" x="14" y="10" />
+							<action type="setProperty" propertyName="foundMonkey" value="true" />
+							<action type="removeNonPlayableCharacter" characterName="monkey"/>
+							<action type="setInventory" slot="11" item="monkey" />
+							<action type="updateMissionProgress" text="Your progress through the City of Mohenjo-Daro is 70%"/>
+							<action type="updateGameProgress" progress="66" showPulse="true"/>
+							<action type="updateMapTile" x="6" y="13" walkable="true" blocked="false" cost="0" />
+							<action type="characterGotoTile" characterName="kid" x="7" y="11" />
+							<action type="characterChangeDirection" characterName="kid" directionToFace="down"/>
+							<action type="updateMapTile" x="7" y="11" walkable="true" blocked="true" cost="999" />
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			
+			<character name="kid">
+				<dialogue id="1" name="Kid" color="">
+					<option jumpId="2">
+						<text><![CDATA[Wah! I’ve lost my pet monkey! Please help me find it! My mother will be so angry with me. I think I lost it near the Great Bath…]]></text>
+					</option>
+					<option jumpId="3">
+						<condition propertyName="foundMonkey" value="true" />
+						<text><![CDATA[Thank you, kind trader! I won’t let my monkey run away again.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="">
+						<text><![CDATA[Don’t worry. I will help you find your monkey.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="{HUMAN}" color="">
+					<option jumpId="">
+						<text><![CDATA[You are welcome. Take good care of it. Don’t lose it again. Or you may have to get a different pet, like a cat!]]></text>
+						<actions>
+							<action type="changeMap" location="mohenjo_daro" map="map4"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			
+			<character name="rhinoSealTrader">
+				<dialogue id="1" name="Stall Owner" color="">
+					<option jumpId="2">
+						<text><![CDATA[Later on I am going to collect some new clay bowls to trade, from the potter. He makes lovely red coloured pots with animals and plants painted on them in black.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="Stall Owner" color="">
+					<option jumpId="">
+						<text><![CDATA[You can come back to trade some with me tomorrow, maybe.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			
+			<character name="guard1">
+				<dialogue id="1" name="Guard" color="">
+					<option jumpId="">
+						<text><![CDATA[I am guarding the temple for the priest.]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="stallTrader1">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello. I make clothes. I spin cotton into cloth, but I'm running out, so my stall is running low on clothes to trade.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader2">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[It’s very hot today, isn’t it?]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader3">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I'm selling sesame and dates today.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader4">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[It's nearly lunchtime, I can't trade just now but maybe later.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader5">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I’ve just been to a special ceremony to thank the gods for the grain harvest. It was a very exciting ceremony for a grain trader like me!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader6">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I have many stone axe-heads if that's what you are after.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader7">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Later on I will help my brother make a wooden ship, but for now I am trading! Maybe I will see you later to trade.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader8">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Have you seen my cooking pot? I’m sure I left it here somewhere!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader9">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I’m hungry! If only I could find some dates or bread.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader10">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello trader, you look like you come from far away. Do come back if you want to trade with me later.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader11">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[You’re a trader, aren’t you? I'll bet your village does not compare to our town!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident1">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I’ve lost my cat, I must search for her!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident2">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[That pesky monkey has been running all over the place!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident3">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Can’t stop to talk! I need to fix the wheel on my cart!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident4">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I’m thirsty! I’m off to the well for a drink.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			
+		</characters>
+	</script>
+</data>

@@ -1,0 +1,303 @@
+<data>
+	<map id="2" location="lothal" />
+	<script>
+    
+    
+		<startup>
+			<actions>
+				
+				<!--  We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="resident" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="toiletCleaner" definition="bbc.indusvalley.game.characters.npc.Man2" />
+					<action type="createNonPlayableCharacter" characterName="overseaTrader" definition="bbc.indusvalley.game.characters.npc.Man5" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader1" definition="bbc.indusvalley.game.characters.npc.Man4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader2" definition="bbc.indusvalley.game.characters.npc.Man2" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader3" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader4" definition="bbc.indusvalley.game.characters.npc.Woman3" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader5" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader6" definition="bbc.indusvalley.game.characters.npc.Woman5" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader7" definition="bbc.indusvalley.game.characters.npc.Woman1" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader8" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader9" definition="bbc.indusvalley.game.characters.npc.Man3" />
+			
+				<!--  We then teleport them to there position on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="19" y="12" />
+					<action type="teleportCharacter" characterName="resident" x="16" y="13" />
+					<action type="teleportCharacter" characterName="toiletCleaner" x="16" y="18" />
+					<action type="teleportCharacter" characterName="overseaTrader" x="6" y="6" />
+					<action type="teleportCharacter" characterName="stallTrader1" x="6" y="2" />
+					<action type="teleportCharacter" characterName="stallTrader2" x="6" y="9" />
+					<action type="teleportCharacter" characterName="stallTrader3" x="6" y="13" />
+					<action type="teleportCharacter" characterName="stallTrader4" x="6" y="16" />>
+					<action type="teleportCharacter" characterName="stallTrader5" x="3" y="16" />
+					<action type="teleportCharacter" characterName="stallTrader6" x="3" y="13" />
+					<action type="teleportCharacter" characterName="stallTrader7" x="3" y="9" />
+					<action type="teleportCharacter" characterName="stallTrader8" x="3" y="6" />
+					<action type="teleportCharacter" characterName="stallTrader9" x="3" y="2" />
+	
+				<!--  Then set the direction they will be facing -->	
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="resident" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="toiletCleaner" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="overseaTrader" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader1" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader2" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader3" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader4" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader5" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader6" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader7" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader8" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader9" directionToFace="right"/>
+				
+				<!--  We then update the tile on the map -->
+					<action type="updateMapTile" x="3" y="2" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="16" y="18" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="2" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="6" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="13" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="16" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="3" y="16" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="3" y="13" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="3" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="3" y="6" walkable="true" blocked="true" cost="999" />
+				
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="85" showPulse="false"/>
+					<action type="showCutscene" cutsceneName="cutscene10" />
+
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="90" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Lothal is 33%"/>
+					<action type="updateGameLocation" city="lothal" location="You are currently in the City of Lothal"/>		
+					
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="bread" />
+					<action type="setInventory" slot="5" item="tigerSeal" />
+					<action type="setInventory" slot="6" item="meat" />
+					<action type="setInventory" slot="7" item="goatPoo" />
+					<action type="setInventory" slot="8" item="rhinoSeal" />
+					<action type="setInventory" slot="9" item="knife"/>
+					<action type="setInventory" slot="10" item="bangles" />
+					<action type="setInventory" slot="11" item="unicornSeal" />
+					<action type="setInventory" slot="12" item="stones" />
+					<action type="setInventory" slot="13" item="traderSeal" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />	
+					
+				<!-- We then setup the hint's and support panel information (Lothal) -->		
+					<action type="setHintAndTips" slot="1" visible="true" progress="complete" text="Talk to the gate keepers to enter the City of Lothal." />	
+					<action type="setHintAndTips" slot="2" visible="true" progress="none" text="Find a trader with a fish seal in the market." />	
+					<action type="setHintAndTips" slot="3" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="4" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="5" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="6" visible="false" progress="none" text="" />		
+					<action type="setHintAndTips" slot="7" visible="false" progress="none" text="" />		
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />			
+
+				<!-- We then get a trader is speaking to the hero-->
+					<action type="characterGotoTile" characterName="resident" x="18" y="12" />
+					<action type="characterChangeDirection" characterName="resident" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="left"/>
+					<action type="characterConversation" characterName="resident" />
+					<action type="characterGotoTile" characterName="resident" x="16" y="13" />
+					<action type="characterChangeDirection" characterName="resident" directionToFace="down"/>
+					<action type="updateMapTile" x="16" y="13" walkable="true" blocked="true" cost="999" />
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="93" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Lothal is 66%"/>		
+					
+				<!-- We then set the path's for the first resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident1" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="addPointToRoute" characterName="resident1" x="19" y="3" delay="3"/>
+					<action type="addPointToRoute" characterName="resident1" x="19" y="10" delay="3"/>
+					<action type="addPointToRoute" characterName="resident1" x="14" y="10" delay="3"/>
+					<action type="addPointToRoute" characterName="resident1" x="14" y="3" delay="3"/>
+					<action type="teleportCharacter" characterName="resident1" x="14" y="3" />
+					<action type="startRoute" characterName="resident1"/>
+					
+				<!-- We then set the path's for the second resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident2" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="addPointToRoute" characterName="resident2" x="13" y="15" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="20" y="15" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="20" y="21" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="13" y="21" delay="3"/>
+					<action type="teleportCharacter" characterName="resident2" x="13" y="21" />
+					<action type="startRoute" characterName="resident2"/>	
+
+			</actions>
+		</startup>
+        
+        
+		<characters>
+				
+			<character name="resident">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="2">
+						<text><![CDATA[You don’t look like you come from Lothal. Are you here to find the overseas trader?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Yes, I am. Do you know how I can find him?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Yes. Look for the man with the fish seal.]]></text>
+					</option>
+				</dialogue>
+			</character>	
+				
+			<character name="toiletCleaner">
+				<dialogue id="1" name="Toilet cleaner" color="">
+					<option jumpId="">
+						<text><![CDATA[I am the drain cleaner. I keep the city drains clean. Not a very nice job, but someone has to do it. I think you want the market? That's where all the traders are!]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="overseaTrader">
+				<dialogue id="1" name="Overseas trader" color="">
+					<option jumpId="2">
+						<text><![CDATA[Hello. I am a trader, and am about to set sail for the west.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[I have been looking for you! I have a seal of the gods from the rulers of Mohenjo-Daro. I want to come with you.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Overseas trader " color="">
+					<option jumpId="">
+						<text><![CDATA[Enter, friend! We can talk about this in my house.]]></text>
+						<actions>
+							<action type="showCutscene" cutsceneName="cutscene11" />
+							<action type="updateGameProgress" progress="96" showPulse="true"/>
+							<action type="playMiniGame" gameName="sealSorting" />
+							<action type="updateGameProgress" progress="100" showPulse="true"/>
+							<action type="showCutscene" cutsceneName="cutscene12" />
+							<action type="endGame"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader1">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello. I make clothes. I spin cotton into cloth. I need to find some more as my trading stocks are running low.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader2">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[It’s very hot, isn’t it?]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader3">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[If you had mustard seeds we could have traded!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader4">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Melons and dates to trade!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader5">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[What a shame, if it was a fine cooking pot you were after we could have traded!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader6">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I can't trade right now, I'm afraid.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader7">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Greetings trader, you look like you have travelled a long way.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader8">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[No, it's not me that has the fish seal I'm afraid.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader9">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[It's too hot to trade, I think I may take a break now.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident1">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[The trader with the fish seal? I'm not sure, why not ask around in the market?]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident2">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Do you like my necklace? It is made of coloured beads and gold!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident3">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Can’t stop to talk! I need to fix the wheel on my cart!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident4">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I’m thirsty! I’m off to the well for a drink]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+		</characters>
+	</script>
+</data>

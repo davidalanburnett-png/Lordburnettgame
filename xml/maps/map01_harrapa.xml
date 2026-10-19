@@ -1,0 +1,205 @@
+<data>
+	<map id="1" location="harrapa" />
+	<script>
+    
+    
+		<startup>
+			<actions>
+				
+				<!--  We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="trader" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="gateKeeper1" definition="bbc.indusvalley.game.characters.npc.GateKeeper1" />
+					<action type="createNonPlayableCharacter" characterName="chiefGateKeeper" definition="bbc.indusvalley.game.characters.npc.GateKeeper2" />
+					<action type="createNonPlayableCharacter" characterName="masterCraftsman" definition="bbc.indusvalley.game.characters.npc.Craftsman" />
+					
+				<!-- We then position of the Non Playable Characters on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="3" y="14" />
+					<action type="teleportCharacter" characterName="trader" x="4" y="12" />
+					<action type="teleportCharacter" characterName="gateKeeper1" x="4" y="11" />
+					<action type="teleportCharacter" characterName="chiefGateKeeper" x="6" y="11" />
+					<action type="teleportCharacter" characterName="masterCraftsman" x="1" y="13" />
+				
+				<!-- We then direction of the Non Playable Characters will be facing on the map -->
+					<action type="characterChangeDirection" characterName="trader" directionToFace="up"/>
+					<action type="characterChangeDirection" characterName="gateKeeper1" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="chiefGateKeeper" directionToFace="down"/>	
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="down"/>
+					
+				<!-- We then update the tile on the map -->
+					<action type="updateMapTile" x="5" y="10" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="1" y="13" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="4" y="11" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="11" walkable="true" blocked="true" cost="999" />
+				
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="0" showPulse="false"/>
+					<action type="showCutscene" cutsceneName="cutscene01" />
+
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="0" showPulse="false"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 0%"/>
+					<action type="updateGameLocation" city="harrapa" location="You are currently outside the City of Harrapa"/>		
+						
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="minerals" />
+					<action type="setInventory" slot="5" item="bread" />
+					<action type="setInventory" slot="6" item="empty" />
+					<action type="setInventory" slot="7" item="empty" />
+					<action type="setInventory" slot="8" item="empty" />
+					<action type="setInventory" slot="9" item="empty" />
+					<action type="setInventory" slot="10" item="empty" />
+					<action type="setInventory" slot="11" item="empty" />
+					<action type="setInventory" slot="12" item="empty" />
+					<action type="setInventory" slot="13" item="empty" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />		
+							
+				<!-- We then setup the hint's and support panel information (Harrapa) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="complete" text="Speak to the trader outside the city." />
+					<action type="setHintAndTips" slot="2" visible="true" progress="none" text="Speak to the gate keepers to enter the City of Harrapa." />
+					<action type="setHintAndTips" slot="3" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="4" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="5" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="6" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="7" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />			
+
+				<!-- We then pause to make it look like the trader is speaking to the chief Gate Keeper and then he will come and talk to the hero-->
+					<action type="delayForDuration" duration="2"/>
+					<action type="characterGotoTile" characterName="trader" x="3" y="13" />
+					<action type="characterChangeDirection" characterName="trader" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="up"/>
+					<action type="characterConversation" characterName="trader" />
+				
+				<!-- After the conversation the trader gives the hero bread and heads home -->
+					<action type="characterGotoTile" characterName="trader" x="10" y="13" />
+					<action type="removeNonPlayableCharacter" characterName="trader"/>
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="5" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 10%"/>	
+					
+
+			</actions>
+		</startup>
+        
+        
+		<characters>
+
+			<character name="trader">
+				<dialogue id="1" name="Trader" color="">
+					<option jumpId="2">
+						<text><![CDATA[I want to get into the city to trade my goods, but the gatekeepers won't let me in!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="Trader" color="">
+					<option jumpId="3">
+						<text><![CDATA[I have brought much wool and cotton here on my camel - but they say I owe them tax money from my last visit and I can't come in until I pay them!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="{HUMAN}" color="">
+					<option jumpId="4">
+						<text><![CDATA[I have come a long way from my village. I got chased by a rhinoceros on the way here. I hope they let me in!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Good luck! And you can take some of my bread - I don't need it now. I'm going home.]]></text>
+					</option>
+				</dialogue>	
+			</character>
+
+
+			<character name="gateKeeper1">
+				<dialogue id="1" name="Gate Keeper" color="">
+					<option jumpId="2">
+						<text><![CDATA[Behold the mighty city of Harappa! Greatest of all cities! Only honest people may enter!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[I am an honest trader who seeks to enter your great city.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Gate Keeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Then you must speak with the chief gatekeeper. On your way!]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+
+			<character name="chiefGateKeeper">
+				<dialogue id="1" name="Gatekeeper" color="">
+					<option jumpId="2">
+						<text><![CDATA[Greetings stranger. Have you travelled a long way?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Yes - I come from a village in the north. My companion and I journeyed here by ox cart. We seek to trade.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Gatekeeper" color="">
+					<option jumpId="question">
+						<text><![CDATA[I am the chief gatekeeper! All who would enter Harappa must see me first! Why should I let you enter our city?]]></text>
+						<answers>
+							<answer jumpId="4">
+								<text><![CDATA[I have minerals to trade!]]></text>
+							</answer>
+							<answer jumpId="5">
+								<text><![CDATA[I have lots of dates and melons!]]></text>
+							</answer>
+							<answer jumpId="6">
+								<text><![CDATA[I want to see Harappa!]]></text>
+							</answer>
+						</answers>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Minerals! Then you may enter - we always have need of them!]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="5" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Dates! Melons! Bah! We have enough food. But you may enter anyway - I hope you have other things as well!]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="6" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Everyone wants to see Harappa! People are always trying to get in! But you may enter. I hope you have some useful things to trade!]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			
+			<character name="masterCraftsman">
+				<dialogue id="1" name="Master Craftsman" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello friend! I think that we should try speaking to the gatekeepers about entering the city.]]></text>
+					</option>
+				</dialogue>
+			</character>	
+			
+		</characters>
+	</script>
+</data>

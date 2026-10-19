@@ -1,0 +1,197 @@
+<data>
+	<map id="1" location="mohenjo_daro" />
+	<script>
+    
+    
+		<startup>
+			<actions>
+				
+				<!--  We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="trader" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="gateKeeper1" definition="bbc.indusvalley.game.characters.npc.GateKeeper2" />
+					<action type="createNonPlayableCharacter" characterName="chiefGateKeeper" definition="bbc.indusvalley.game.characters.npc.GateKeeper1" />
+
+				<!-- We then position of the Non Playable Characters on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="10" y="6" />
+					<action type="teleportCharacter" characterName="trader" x="4" y="6" />
+					<action type="teleportCharacter" characterName="gateKeeper1" x="1" y="11" />
+					<action type="teleportCharacter" characterName="chiefGateKeeper" x="1" y="14" />
+					
+				<!--  We then direction of the Non Playable Characters will be facing on the map -->
+					<action type="characterChangeDirection" characterName="trader" directionToFace="up"/>
+					<action type="characterChangeDirection" characterName="gateKeeper1" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="chiefGateKeeper" directionToFace="down"/>	
+				
+				<!--  We then update the tile on the map -->
+					<action type="updateMapTile" x="1" y="11" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="1" y="14" walkable="true" blocked="true" cost="999" />
+				
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="36" showPulse="false"/>			
+					<action type="showCutscene" cutsceneName="cutscene05" />	
+
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="40" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Mohenjo-Daro is 0%"/>
+					<action type="updateGameLocation" city="mohenjo_daro" location="You are currently at the City of Mohenjo-Daro docks"/>		
+				
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="bread" />
+					<action type="setInventory" slot="5" item="tigerSeal" />
+					<action type="setInventory" slot="6" item="beads" />
+					<action type="setInventory" slot="7" item="meat" />
+					<action type="setInventory" slot="8" item="goatPoo" />
+					<action type="setInventory" slot="9" item="empty" />
+					<action type="setInventory" slot="10" item="empty" />
+					<action type="setInventory" slot="11" item="empty" />
+					<action type="setInventory" slot="12" item="empty" />
+					<action type="setInventory" slot="13" item="empty" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />
+							
+				<!-- We then setup the hint's and support panel information (Mohenjo-Daro) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="none" text="Talk to the gate keepers to enter the City of Mohenjo-Daro." />	
+					<action type="setHintAndTips" slot="2" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="3" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="4" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="5" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="6" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="7" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />						
+
+				<!-- We then get a trader is speaking to the human player and then to walk off and disappear -->
+					<action type="characterGotoTile" characterName="trader" x="9" y="6" />
+					<action type="characterChangeDirection" characterName="trader" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="left"/>
+					<action type="characterConversation" characterName="trader" />
+					<action type="characterGotoTile" characterName="trader" x="4" y="6" />
+					<action type="removeNonPlayableCharacter" characterName="trader"/>
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="45" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Mohenjo-Daro is 10%"/>	
+					
+				<!-- We then set the path's for the first resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident1" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="addPointToRoute" characterName="resident1" x="13" y="18" delay="3"/>
+					<action type="addPointToRoute" characterName="resident1" x="1" y="17" delay="3"/>
+					<action type="teleportCharacter" characterName="resident1" x="1" y="17" />
+					<action type="startRoute" characterName="resident1"/> 
+					
+				<!-- We then set the path's for the second resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident2" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="addPointToRoute" characterName="resident2" x="11" y="1" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="6" y="4" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="4" y="1" delay="3"/>
+					<action type="teleportCharacter" characterName="resident2" x="4" y="1" />
+					<action type="startRoute" characterName="resident2"/>		
+					
+			</actions>
+		</startup>
+        
+        
+		<characters>
+
+			<character name="trader">
+				<dialogue id="1" name="Trader" color="">
+					<option jumpId="2">
+						<text><![CDATA[Welcome to Mohenjo-Daro, I have done some good business in this city! And there are many wonderful things to see. But you must persuade the gatekeepers to let you in.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="">
+						<text><![CDATA[I will!]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="gateKeeper1">
+				<dialogue id="1" name="Gatekeeper" color="">
+					<option jumpId="2">
+						<text><![CDATA[Have you come with melons to trade? There have been far too many melon traders lately.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[No, I have not.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[That is good! We have too many melons already. We don’t need any more..]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+
+			<character name="chiefGateKeeper">
+				<dialogue id="1" name="Gatekeeper" color="">
+					<option jumpId="question">
+						<text><![CDATA[I am the chief gatekeeper of Mohenjo-Daro! Why should we let you in to our City, trader?]]></text>
+						<answers>
+							<answer jumpId="2">
+								<text><![CDATA[I have meat and fish!]]></text>
+							</answer>
+							<answer jumpId="3">
+								<text><![CDATA[I have coloured beads!]]></text>
+							</answer>
+							<answer jumpId="4">
+								<text><![CDATA[I have heard your City has wonderful things to see!]]></text>
+							</answer>
+						</answers>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Fish! Meat! Pah! Such things are common in our city – as you shall see!]]></text>
+						<actions>
+							<action type="changeMap" location="mohenjo_daro" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Coloured beads! That is good. Such things are valued in my city. Enter, friend.]]></text>
+						<actions>
+							<action type="changeMap" location="mohenjo_daro" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[There are many wonders to see, it is true. Enter, friend.]]></text>
+						<actions>
+							<action type="changeMap" location="mohenjo_daro" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident1">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[It’s very hot today.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident2">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[When I get into the city I'm going to the shops to buy some mustard seeds and sesame, I have run out at home.]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+		</characters>
+	</script>
+</data>

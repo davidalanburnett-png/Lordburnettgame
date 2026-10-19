@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+
+	<application>
+
+			<!-------------------------------------------------------------------------------------------------------->
+			<!-- THIS HOLDS INFORMATION FOR THE ENTIRE GAME -->
+			<!-------------------------------------------------------------------------------------------------------->
+
+				<group id="game">
+					<asset id="characters" path="swf/characters.swf"></asset>
+					<setting id="nameOfHero"><![CDATA[Indy]]></setting>
+					<setting id="defaultHeroName"><![CDATA[Your name here]]></setting>
+               		<setting id="alignment"><![CDATA[left]]></setting>
+              		<setting id="location"><![CDATA[harappa]]></setting>
+               		<setting id="map"><![CDATA[map1]]></setting>
+
+             		 <group id="newGame">
+              			<setting id="location"><![CDATA[harappa]]></setting>
+               			<setting id="map"><![CDATA[map1]]></setting>
+              		</group>
+					
+					<group id="miniGame">
+               			<asset id="gemSorting" path="swf/minigames/gem_sorting.swf"></asset>
+               			<asset id="sealSorting" path="swf/minigames/seal_sorting.swf"></asset>
+           			</group>
+				
+           			<group id="cutscenes">
+               			<asset id="cutscene01" path="swf/cutscenes/cutscene01.swf"></asset>
+               			<asset id="cutscene02" path="swf/cutscenes/cutscene02.swf"></asset>
+             			<asset id="cutscene03" path="swf/cutscenes/cutscene03.swf"></asset>
+               			<asset id="cutscene04" path="swf/cutscenes/cutscene04.swf"></asset>
+               			<asset id="cutscene05" path="swf/cutscenes/cutscene05.swf"></asset>
+               			<asset id="cutscene06" path="swf/cutscenes/cutscene06.swf"></asset>
+               			<asset id="cutscene07" path="swf/cutscenes/cutscene07.swf"></asset>
+              	 		<asset id="cutscene08" path="swf/cutscenes/cutscene08.swf"></asset>
+               			<asset id="cutscene09" path="swf/cutscenes/cutscene09.swf"></asset>
+               			<asset id="cutscene10" path="swf/cutscenes/cutscene10.swf"></asset>
+               			<asset id="cutscene11" path="swf/cutscenes/cutscene11.swf"></asset>
+               			<asset id="cutscene12" path="swf/cutscenes/cutscene12.swf"></asset>
+           			</group>
+
+           			<group id="maps">
+
+                		<group id="harappa_map1">
+                			<setting id="code"><![CDATA[AAAAAAAAA]]></setting>
+                			<setting id="location"><![CDATA[harappa]]></setting>
+          	  				<setting id="map"><![CDATA[map1]]></setting>
+                    		<data id="script" path="xml/maps/map01_harrapa.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map1]]></setting>
+                    		<asset id="map" path="swf/harappa.swf"></asset>
+                		</group>
+                
+                		<group id="harappa_map2">
+                			<setting id="code"><![CDATA[BBBBBBBBB]]></setting>
+                			<setting id="location"><![CDATA[harappa]]></setting>
+          	  				<setting id="map"><![CDATA[map2]]></setting>
+                   			<data id="script" path="xml/maps/map02_harrapa.xml"></data>
+                			<setting id="mapArtwork"><![CDATA[map2]]></setting>
+                    		<asset id="map" path="swf/harappa.swf"></asset>
+                		</group>
+                
+                		<group id="harappa_map3">
+							<setting id="code"><![CDATA[CCCCCCCCC]]></setting>
+							<setting id="location"><![CDATA[harappa]]></setting>
+							<setting id="map"><![CDATA[map3]]></setting>
+                			<data id="script" path="xml/maps/map03_harrapa.xml"></data>
+                			<setting id="mapArtwork"><![CDATA[map3]]></setting>
+                			<asset id="map" path="swf/harappa.swf"></asset>
+                		</group>
+
+                		<group id="harappa_map4">
+							<setting id="code"><![CDATA[DDDDDDDDD]]></setting>
+                			<setting id="location"><![CDATA[harappa]]></setting>
+          	  				<setting id="map"><![CDATA[map4]]></setting>
+                    		<data id="script" path="xml/maps/map04_harrapa.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map4]]></setting>
+                   			<asset id="map" path="swf/harappa.swf"></asset>
+                		</group>
+                		
+                		<group id="mohenjo_daro_map1">
+                			<setting id="code"><![CDATA[EEEEEEEEE]]></setting>
+                			<setting id="location"><![CDATA[mohenjo_daro]]></setting>
+          	  				<setting id="map"><![CDATA[map1]]></setting>
+                    		<data id="script" path="xml/maps/map01_mohenjo_daro.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map1]]></setting>
+                    		<asset id="map" path="swf/mohenjo_daro_map1.swf"></asset>
+                		</group>
+                		
+                		<group id="mohenjo_daro_map2">
+                			<setting id="code"><![CDATA[FFFFFFFFF]]></setting>
+                			<setting id="location"><![CDATA[mohenjo_daro]]></setting>
+          	  				<setting id="map"><![CDATA[map2]]></setting>
+                    		<data id="script" path="xml/maps/map02_mohenjo_daro.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map2]]></setting>
+                    		<asset id="map" path="swf/mohenjo_daro_map2.swf"></asset>
+                		</group>
+                		
+                		
+                		<group id="mohenjo_daro_map3">
+                			<setting id="code"><![CDATA[GGGGGGGGG]]></setting>
+                			<setting id="location"><![CDATA[mohenjo_daro]]></setting>
+          	  				<setting id="map"><![CDATA[map3]]></setting>
+                    		<data id="script" path="xml/maps/map03_mohenjo_daro.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map3]]></setting>
+                    		<asset id="map" path="swf/mohenjo_daro_map3.swf"></asset>
+                		</group>
+                		
+                		<group id="mohenjo_daro_map4">
+                			<setting id="code"><![CDATA[HHHHHHHHH]]></setting>
+                			<setting id="location"><![CDATA[mohenjo_daro]]></setting>
+          	  				<setting id="map"><![CDATA[map4]]></setting>
+                    		<data id="script" path="xml/maps/map04_mohenjo_daro.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map3]]></setting>
+                    		<asset id="map" path="swf/mohenjo_daro_map3.swf"></asset>
+                		</group>
+                		
+                		<group id="lothal_map1">
+                			<setting id="code"><![CDATA[JJJJJJJJJ]]></setting>
+                			<setting id="location"><![CDATA[lothal]]></setting>
+          	  				<setting id="map"><![CDATA[map1]]></setting>
+                    		<data id="script" path="xml/maps/map01_lothal.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map1]]></setting>
+                    		<asset id="map" path="swf/lothal_map1.swf"></asset>
+                		</group>
+                		
+                		<group id="lothal_map2">
+                			<setting id="code"><![CDATA[KKKKKKKKK]]></setting>
+                			<setting id="location"><![CDATA[lothal]]></setting>
+          	  				<setting id="map"><![CDATA[map2]]></setting>
+                    		<data id="script" path="xml/maps/map02_lothal.xml"></data>
+                    		<setting id="mapArtwork"><![CDATA[map2]]></setting>
+                    		<asset id="map" path="swf/lothal_map2.swf"></asset>
+                		</group>
+
+					</group>
+
+				</group>
+
+
+			<!-------------------------------------------------------------------------------------------------------->
+			<!-- THIS HOLDS INFORMATION FOR EACH INDIVIDUAL SCREENS -->
+			<!-------------------------------------------------------------------------------------------------------->
+
+
+				<group id="screens">
+
+					<group id="startScreen">
+						<asset id="view"  path="swf/start_screen.swf"></asset>
+					</group>
+
+					<group id="settingsScreen">
+						<asset id="view"  path="swf/settings_screen.swf"></asset>
+					</group>
+
+					<group id="howToPlayScreen">
+						<asset id="view"  path="swf/how_to_play_screen.swf"></asset>
+					</group>
+
+					<group id="howToPlayScreen">
+						<asset id="view"  path="swf/how_to_play_screen.swf"></asset>
+					</group>
+
+					<group id="gameIntroduction">
+						<asset id="view"  path="swf/game_introduction.swf"></asset>
+					</group>
+
+					<group id="gameInterface">
+						<asset id="view"  path="swf/game_interface.swf"></asset>
+					</group>
+
+					<group id="loadGamePopup">
+						<asset id="view"  path="swf/load_game_popup.swf"></asset>
+					</group>
+
+					<group id="scriptTestHarness">
+						<asset id="view"  path="swf/script_test_harness.swf"></asset>
+					</group>
+
+
+
+
+				</group>
+
+
+	</application>
+
+
+	<swearFilter>
+
+			<!-- This list holds all the words which are exclused from the swear filter-->
+				<exclusions>
+						<word>scunthorpe</word>
+						<word>peniston</word>
+						<word>essex</word>
+						<word>sussex</word>
+						<word>parse</word>
+						<word>sturdy</word>
+						<word>competition</word>
+						<word>ghostwatch</word>
+						<word>cockburn</word>
+						<word>ballcock</word>
+						<word>shitake</word>
+						<word>callahan</word>
+						<word>skyscraper</word>
+						<word>lightwater</word>
+						<word>peacock</word>
+				</exclusions>
+
+
+			<!-- This list holds all the banned words (which only need a partial match) -->
+				<partialMatch>
+						<word>acid</word>
+						<word>addict</word>
+						<word>adict</word>
+						<word>alky</word>
+						<word>alchie</word>
+						<word>alkey</word>
+						<word>alkie</word>
+						<word>alcohol</word>
+						<word>amyl</word>
+						<word>anus</word>
+						<word>anal</word>
+						<word>arse</word>
+						<word>ass</word>
+						<word>bastard</word>
+						<word>beer</word>
+						<word>bitch</word>
+						<word>blow</word>
+						<word>bloody</word>
+						<word>blunt</word>
+						<word>boob</word>
+						<word>booze</word>
+						<word>boozer</word>
+						<word>bollock</word>
+						<word>boner</word>
+						<word>breast</word>
+						<word>brothel</word>
+						<word>bugger</word>
+						<word>butt</word>
+						<word>bum</word>
+						<word>cannabis</word>
+						<word>cheeba</word>
+						<word>chiba</word>
+						<word>cider</word>
+						<word>cigarette</word>
+						<word>ciggy</word>
+						<word>cyder</word>
+						<word>clit</word>
+						<word>cock</word>
+						<word>cocaine</word>
+						<word>coke</word>
+						<word>crack</word>
+						<word>crap</word>
+						<word>crapper</word>
+						<word>crotch</word>
+						<word>cum</word>
+						<word>cunt</word>
+						<word>damn</word>
+						<word>dealer</word>
+						<word>dick</word>
+						<word>dike</word>
+						<word>dildo</word>
+						<word>dong</word>
+						<word>doob</word>
+						<word>dooby</word>
+						<word>doobie</word>
+						<word>dope</word>
+						<word>drug</word>
+						<word>druggie</word>
+						<word>druggy</word>
+						<word>drugs</word>
+						<word>dumb</word>
+						<word>dump</word>
+						<word>dyke</word>
+						<word>escort</word>
+						<word>ecstasy</word>
+						<word>fag</word>
+						<word>fanny</word>
+						<word>fat</word>
+						<word>fcuk</word>
+						<word>feces</word>
+						<word>feck</word>
+						<word>fuck</word>
+						<word>gay</word>
+						<word>gange</word>
+						<word>ganga</word>
+						<word>ganja</word>
+						<word>hashish</word>
+						<word>hairy</word>
+						<word>hash</word>
+						<word>hell</word>
+						<word>heroin</word>
+						<word>hooker</word>
+						<word>jesus</word>
+						<word>joint</word>
+						<word>jizz</word>
+						<word>junkie</word>
+						<word>junky</word>
+						<word>kunt</word>
+						<word>lager</word>
+						<word>lesbian</word>
+						<word>lesbo</word>
+						<word>lezzie</word>
+						<word>liquor</word>
+						<word>love</word>
+						<word>lurve</word>
+						<word>marijuana</word>
+						<word>mdma</word>
+						<word>minge</word>
+						<word>milf</word>
+						<word>mother</word>
+						<word>muff</word>
+						<word>nasty</word>
+						<word>needle</word>
+						<word>needles</word>
+						<word>negro</word>
+						<word>nicotine</word>
+						<word>nigga</word>
+						<word>nigger</word>
+						<word>orgasm</word>
+						<word>paki</word>
+						<word>pecker</word>
+						<word>penis</word>
+						<word>piss</word>
+						<word>poo</word>
+						<word>pussy</word>
+						<word>puke</word>
+						<word>puker</word>
+						<word>reefer</word>
+						<word>roach</word>
+						<word>sex</word>
+						<word>shat</word>
+						<word>shit</word>
+						<word>skunk</word>
+						<word>slag</word>
+						<word>slapper</word>
+						<word>slut</word>
+						<word>smeg</word>
+						<word>snatch</word>
+						<word>spaz</word>
+						<word>speed</word>
+						<word>spliff</word>
+						<word>spliffy</word>
+						<word>sod</word>
+						<word>stripper</word>
+						<word>syringe</word>
+						<word>tampon</word>
+						<word>tart</word>
+						<word>testicle</word>
+						<word>topless</word>
+						<word>thundercunt</word>
+						<word>tit</word>
+						<word>tramp</word>
+						<word>trollop</word>
+						<word>turd</word>
+						<word>twat</word>
+						<word>ugly</word>
+						<word>vagina</word>
+						<word>vodka</word>
+						<word>vulva</word>
+						<word>wank</word>
+						<word>wanna</word>
+						<word>weed</word>
+						<word>whore</word>
+						<word>whiskey</word>
+						<word>whisky</word>
+						<word>whizz</word>
+						<word>wine</word>
+						<word>wino</word>
+						<word>wizz</word>
+						<word>wuss</word>
+						<word>xxx</word>
+						<word>www</word>
+						<word>http://</word>
+				</partialMatch>
+
+
+			<!-- This list holds all the banned words (which only need an exact match) -->
+				<exactMatch>
+						<word>admin</word>
+						<word>administrator</word>
+						<word>anus</word>
+						<word>anal</word>
+						<word>arse</word>
+						<word>arsehole</word>
+						<word>ass</word>
+						<word>ass-hat</word>
+						<word>ass-pirate</word>
+						<word>assbag</word>
+						<word>assbandit</word>
+						<word>assbanger</word>
+						<word>assbite</word>
+						<word>assclown</word>
+						<word>asscock</word>
+						<word>asscracker</word>
+						<word>asses</word>
+						<word>assface</word>
+						<word>assfuck</word>
+						<word>assfucker</word>
+						<word>assgoblin</word>
+						<word>asshat</word>
+						<word>asshead</word>
+						<word>asshole</word>
+						<word>asshopper</word>
+						<word>assjacker</word>
+						<word>asslick</word>
+						<word>asslicker</word>
+						<word>assmonkey</word>
+						<word>assmunch</word>
+						<word>assmuncher</word>
+						<word>assnigger</word>
+						<word>asspirate</word>
+						<word>assshit</word>
+						<word>assshole</word>
+						<word>asssucker</word>
+						<word>asswad</word>
+						<word>asswipe</word>
+						<word>bampot</word>
+						<word>bastard</word>
+						<word>beaner</word>
+						<word>balls</word>
+						<word>beaver</word>
+						<word>beaver box</word>
+						<word>bearded clam</word>
+						<word>biggie</word>
+						<word>bitch</word>
+						<word>bitchass</word>
+						<word>bitches</word>
+						<word>bitchtits</word>
+						<word>bitchy</word>
+						<word>blow job</word>
+						<word>blow me</word>
+						<word>bloody</word>
+						<word>bloody hell</word>
+						<word>boob</word>
+						<word>boobs</word>
+						<word>boobie</word>
+						<word>boobies</word>
+						<word>bollocks</word>
+						<word>bollox</word>
+						<word>boner</word>
+						<word>breast</word>
+						<word>brothel</word>
+						<word>brotherfucker</word>
+						<word>bugger</word>
+						<word>buggery</word>
+						<word>bullshit</word>
+						<word>bully</word>
+						<word>bullyboy</word>
+						<word>bunny boiler</word>
+						<word>bum</word>
+						<word>bummer</word>
+						<word>bumfuck</word>
+						<word>bumhole</word>
+						<word>bumholeboy</word>
+						<word>bumblefuck</word>
+						<word>butt</word>
+						<word>butt plug</word>
+						<word>butt-pirate</word>
+						<word>buttfucka</word>
+						<word>buttfucker</word>
+						<word>call girl</word>
+						<word>camel toe</word>
+						<word>carpetmuncher</word>
+						<word>chinc</word>
+						<word>chink</word>
+						<word>choad</word>
+						<word>chode</word>
+						<word>clart</word>
+						<word>clit</word>
+						<word>clitty</word>
+						<word>clitface</word>
+						<word>clitfuck</word>
+						<word>clusterfuck</word>
+						<word>cock</word>
+						<word>cockass</word>
+						<word>cockbite</word>
+						<word>cockburger</word>
+						<word>cockface</word>
+						<word>cockfucker</word>
+						<word>cockhead</word>
+						<word>cockjockey</word>
+						<word>cockknoker</word>
+						<word>cockmaster</word>
+						<word>cockmongler</word>
+						<word>cockmongruel</word>
+						<word>cockmonkey</word>
+						<word>cockmuncher</word>
+						<word>cocknose</word>
+						<word>cocknugget</word>
+						<word>cockshit</word>
+						<word>cocksmith</word>
+						<word>cocksmoker</word>
+						<word>cocksucker</word>
+						<word>coochie</word>
+						<word>coochy</word>
+						<word>coon</word>
+						<word>cooter</word>
+						<word>cracker</word>
+						<word>croch</word>
+						<word>crotch</word>
+						<word>cunnilingus</word>
+						<word>cunny</word>
+						<word>cum</word>
+						<word>cum-catcher</word>
+						<word>cumbubble</word>
+						<word>cumdumpster</word>
+						<word>cumguzzler</word>
+						<word>cumjockey</word>
+						<word>cumslut</word>
+						<word>cumtart</word>
+						<word>cunnie</word>
+						<word>cunnilingus</word>
+						<word>cunt</word>
+						<word>cuntface</word>
+						<word>cunthole</word>
+						<word>cuntlicker</word>
+						<word>cuntrag</word>
+						<word>cuntslut</word>
+						<word>dago</word>
+						<word>damn</word>
+						<word>deggo</word>
+						<word>dick</word>
+						<word>dickbag</word>
+						<word>dickbeaters</word>
+						<word>dickface</word>
+						<word>dickfuck</word>
+						<word>dickfucker</word>
+						<word>dickhead</word>
+						<word>dickhole</word>
+						<word>dickjuice</word>
+						<word>dickmilk</word>
+						<word>dickmonger</word>
+						<word>dicks</word>
+						<word>dickslap</word>
+						<word>dicksucker</word>
+						<word>dickwad</word>
+						<word>dickweasel</word>
+						<word>dickweed</word>
+						<word>dickwod</word>
+						<word>dike</word>
+						<word>dildo</word>
+						<word>dimfuck</word>
+						<word>dipshit</word>
+						<word>dong</word>
+						<word>doochbag</word>
+						<word>dookie</word>
+						<word>douche</word>
+						<word>douche-fag</word>
+						<word>douchebag</word>
+						<word>douchewaffle</word>
+						<word>dumass</word>
+						<word>dumfuck</word>
+						<word>dumb ass</word>
+						<word>dumbass</word>
+						<word>dumbfuck</word>
+						<word>dump</word>
+						<word>dumpster</word>
+						<word>dumbshit</word>
+						<word>dumshit</word>
+						<word>dyke</word>
+						<word>easy woman</word>
+						<word>escort</word>
+						<word>fag</word>
+						<word>fagbag</word>
+						<word>fagfucker</word>
+						<word>faggit</word>
+						<word>faggot</word>
+						<word>faggotcock</word>
+						<word>fagtard</word>
+						<word>fanny</word>
+						<word>fatass</word>
+						<word>feck</word>
+						<word>fecal</word>
+						<word>feces</word>
+						<word>fellate</word>
+						<word>fellatio</word>
+						<word>feltch</word>
+						<word>fish taco</word>
+						<word>flamer</word>
+						<word>fly catcher</word>
+						<word>frottage</word>
+						<word>funbags</word>
+						<word>fuck</word>
+						<word>fuckass</word>
+						<word>fuckbag</word>
+						<word>fuckboy</word>
+						<word>fuckbrain</word>
+						<word>fuckbutt</word>
+						<word>fucked</word>
+						<word>fucker</word>
+						<word>fuckersucker</word>
+						<word>fuckface</word>
+						<word>fuckhead</word>
+						<word>fuckhole</word>
+						<word>fuckin</word>
+						<word>fucking</word>
+						<word>fucknut</word>
+						<word>fucknutt</word>
+						<word>fuckoff</word>
+						<word>fucks</word>
+						<word>fuckstick</word>
+						<word>fucktard</word>
+						<word>fuckup</word>
+						<word>fuckwad</word>
+						<word>fuckwit</word>
+						<word>fuckwitt</word>
+						<word>fudgepacker</word>
+						<word>gash</word>
+						<word>gay</word>
+						<word>gayass</word>
+						<word>gaybob</word>
+						<word>gaydo</word>
+						<word>gayfuck</word>
+						<word>gayfuckist</word>
+						<word>gaylord</word>
+						<word>gaytard</word>
+						<word>gaywad</word>
+						<word>gigolo</word>
+						<word>god</word>
+						<word>goddamn</word>
+						<word>goddamnit</word>
+						<word>gold digger</word>
+						<word>gooch</word>
+						<word>gook</word>
+						<word>groin</word>
+						<word>gringo</word>
+						<word>guido</word>
+						<word>handjob</word>
+						<word>harlot</word>
+						<word>hairy box</word>
+						<word>hairy box</word>
+						<word>hard on</word>
+						<word>hatchet wound</word>
+						<word>heeb</word>
+						<word>hell</word>
+						<word>ho</word>
+						<word>hoe</word>
+						<word>hole</word>
+						<word>hooker</word>
+						<word>honey pot</word>
+						<word>homo</word>
+						<word>homodumbshit</word>
+						<word>honkey</word>
+						<word>hore</word>
+						<word>humping</word>
+						<word>jackass</word>
+						<word>jap</word>
+						<word>jacking off</word>
+						<word>jacking off</word>
+						<word>jew</word>
+						<word>jesus</word>
+						<word>jesus christ</word>
+						<word>jerk off</word>
+						<word>jigaboo</word>
+						<word>jism</word>
+						<word>jizz</word>
+						<word>jungle bunny</word>
+						<word>junglebunny</word>
+						<word>kike</word>
+						<word>killer</word>
+						<word>kooch</word>
+						<word>kootch</word>
+						<word>kunt</word>
+						<word>kyke</word>
+						<word>lesbian</word>
+						<word>lesbo</word>
+						<word>lezzie</word>
+						<word>lsd</word>
+						<word>luv</word>
+						<word>love</word>
+						<word>love box</word>
+						<word>love hole</word>
+						<word>love canal</word>
+						<word>mastibation</word>
+						<word>meat wallet</word>
+						<word>mcfagget</word>
+						<word>mick</word>
+						<word>minge</word>
+						<word>milf</word>
+						<word>moderator</word>
+						<word>mother</word>
+						<word>mothafucka</word>
+						<word>motherfucker</word>
+						<word>motherfucking</word>
+						<word>muff</word>
+						<word>muffdiver</word>
+						<word>munging</word>
+						<word>murder</word>
+						<word>murderer</word>
+						<word>nasty</word>
+						<word>negro</word>
+						<word>nookie</word>
+						<word>nigga</word>
+						<word>nigger</word>
+						<word>niggers</word>
+						<word>niglet</word>
+						<word>nut sack</word>
+						<word>nutsack</word>
+						<word>orgasm</word>
+						<word>onanism</word>
+						<word>paki</word>
+						<word>panooch</word>
+						<word>pecker</word>
+						<word>peckerhead</word>
+						<word>pee</word>
+						<word>penis</word>
+						<word>penisfucker</word>
+						<word>penispuffer</word>
+						<word>pimp</word>
+						<word>pill</word>
+						<word>pills</word>
+						<word>piss</word>
+						<word>pissed</word>
+						<word>pissoff</word>
+						<word>piss-off</word>
+						<word>pissed off</word>
+						<word>pissflaps</word>
+						<word>polesmoker</word>
+						<word>pollock</word>
+						<word>poo</word>
+						<word>poon</word>
+						<word>pot</word>
+						<word>poonani</word>
+						<word>poonany</word>
+						<word>poontang</word>
+						<word>porch monkey</word>
+						<word>porchmonkey</word>
+						<word>prick</word>
+						<word>prostitot</word>
+						<word>prostitute</word>
+						<word>prostitution</word>
+						<word>punanny</word>
+						<word>punta</word>
+						<word>pussies</word>
+						<word>pussy</word>
+						<word>pussylicking</word>
+						<word>puto</word>
+						<word>queef</word>
+						<word>queer</word>
+						<word>queerbait</word>
+						<word>queerhole</word>
+						<word>renob</word>
+						<word>rimjob</word>
+						<word>ruski</word>
+						<word>sand nigger</word>
+						<word>sandnigger</word>
+						<word>schlong</word>
+						<word>scrote</word>
+						<word>sex</word>
+						<word>self-abuse</word>
+						<word>self-stimulation</word>
+						<word>shat</word>
+						<word>shit</word>
+						<word>shitass</word>
+						<word>shitbag</word>
+						<word>shitbagger</word>
+						<word>shitbrains</word>
+						<word>shitbreath</word>
+						<word>shitcunt</word>
+						<word>shitdick</word>
+						<word>shitface</word>
+						<word>shitfaced</word>
+						<word>shit-fuck</word>
+						<word>shithead</word>
+						<word>shithole</word>
+						<word>shithouse</word>
+						<word>shitspitter</word>
+						<word>shitstain</word>
+						<word>shitsucker</word>
+						<word>shitless</word>
+						<word>shithead</word>
+						<word>shitter</word>
+						<word>shittiest</word>
+						<word>shitting</word>
+						<word>shitty</word>
+						<word>shiz</word>
+						<word>shiznit</word>
+						<word>strumpet</word>
+						<word>skank</word>
+						<word>skeet</word>
+						<word>skullfuck</word>
+						<word>slag</word>
+						<word>slapper</word>
+						<word>slut</word>
+						<word>slutbag</word>
+						<word>smeg</word>
+						<word>smegma</word>
+						<word>snapper</word>
+						<word>snatch</word>
+						<word>sod</word>
+						<word>sodding</word>
+						<word>sodomite</word>
+						<word>sodomy</word>
+						<word>son of a bitch</word>
+						<word>son of a bastard</word>
+						<word>son of a whore</word>
+						<word>spic</word>
+						<word>spick</word>
+						<word>splooge</word>
+						<word>street walker</word>
+						<word>stripper</word>
+						<word>tard</word>
+						<word>tampon</word>
+						<word>testicle</word>
+						<word>topless</word>
+						<word>thundercunt</word>
+						<word>tit</word>
+						<word>titfuck</word>
+						<word>tits</word>
+						<word>tittyfuck</word>
+						<word>tramp</word>
+						<word>trollop</word>
+						<word>turd</word>
+						<word>twat</word>
+						<word>twatlips</word>
+						<word>twats</word>
+						<word>twatwaffle</word>
+						<word>unclefucker</word>
+						<word>ugly</word>
+						<word>va-j-j</word>
+						<word>vag</word>
+						<word>vagina</word>
+						<word>vibrator</word>
+						<word>vibrantingvular</word>
+						<word>vulva</word>
+						<word>vjayjay</word>
+						<word>wank</word>
+						<word>wanker</word>
+						<word>wanker</word>
+						<word>wee</word>
+						<word>wetback</word>
+						<word>whore</word>
+						<word>whorebag</word>
+						<word>wanking</word>
+						<word>whosgood</word>
+						<word>wop</word>
+						<word>whiskey</word>
+						<word>whisky</word>
+						<word>whizz</word>
+						<word>wine</word>
+						<word>wino</word>
+						<word>wizz</word>
+						<word>wuss</word>
+						<word>xxx</word>
+						<word>www</word>
+						<word>http://</word>
+						<word>icq</word>
+						<word>yid</word>
+						<word>host</word>
+				</exactMatch>
+
+	</swearFilter>
+
+</data>

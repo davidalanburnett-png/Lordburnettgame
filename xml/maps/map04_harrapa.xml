@@ -1,0 +1,207 @@
+<data>
+	<map id="4" location="harrapa" />
+	<script>
+		
+		<startup>
+			<actions>
+				
+					<!-- We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="captain" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="melonFarmer" definition="bbc.indusvalley.game.characters.npc.Man5" />
+					<action type="createNonPlayableCharacter" characterName="goatWoman" definition="bbc.indusvalley.game.characters.npc.GoatWoman" />
+					<action type="createNonPlayableCharacter" characterName="goat" definition="bbc.indusvalley.game.characters.npc.Goat" />
+					
+				<!-- We then position of the Non Playable Characters on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="0" y="7" />
+					<action type="teleportCharacter" characterName="captain" x="7" y="6" />
+					<action type="teleportCharacter" characterName="melonFarmer" x="1" y="5" />
+					<action type="teleportCharacter" characterName="goatWoman" x="3" y="9" />
+					<action type="teleportCharacter" characterName="goat" x="4" y="9" />
+					
+				<!--  We then direction of the Non Playable Characters will be facing on the map -->	
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="captain" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="melonFarmer" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="goatWoman" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="goat" directionToFace="down"/>
+					
+				<!-- We then update the tile on the map -->
+					<action type="updateMapTile" x="7" y="6" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="1" y="5" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="3" y="9" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="4" y="9" walkable="true" blocked="true" cost="999" />
+				
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="28" showPulse="false"/>	
+					<action type="showCutscene" cutsceneName="cutscene04" />	
+
+				<!-- We then set the property flags for the dialog conversations -->
+					<action type="createProperty" propertyName="metGoatWoman" value="false" />
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="33" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 80%"/>
+					<action type="updateGameLocation" city="harrapa" location="You are currently at the City of Harrapa docks"/>		
+					
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="bread" />
+					<action type="setInventory" slot="5" item="tigerSeal" />
+					<action type="setInventory" slot="6" item="beads" />
+					<action type="setInventory" slot="7" item="meat" />
+					<action type="setInventory" slot="8" item="empty" />
+					<action type="setInventory" slot="9" item="empty" />
+					<action type="setInventory" slot="10" item="empty" />
+					<action type="setInventory" slot="11" item="empty" />
+					<action type="setInventory" slot="12" item="empty" />
+					<action type="setInventory" slot="13" item="empty" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />	
+							
+				<!-- We then setup the hint's and support panel information (Harrapa) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="complete" text="Speak to the trader outside the city." />
+					<action type="setHintAndTips" slot="2" visible="true" progress="complete" text="Speak to the gate keepers to enter the City of Harrapa." />
+					<action type="setHintAndTips" slot="3" visible="true" progress="complete" text="Someone near the well will be able to help you get to the market." />
+					<action type="setHintAndTips" slot="4" visible="true" progress="complete" text="Talk to the trader at the red market stall." />
+					<action type="setHintAndTips" slot="5" visible="true" progress="complete" text="Talk to the trader at the green market stall." />
+					<action type="setHintAndTips" slot="6" visible="true" progress="complete" text="Talk to the trader at the blue market stall." />
+					<action type="setHintAndTips" slot="7" visible="true" progress="none" text="Talk to the woman with the goat." />
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />		
+
+				<!-- We then set the path's for the first resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident1" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="addPointToRoute" characterName="resident1" x="5" y="14" delay="3"/>
+					<action type="addPointToRoute" characterName="resident1" x="0" y="13" delay="3"/>
+					<action type="teleportCharacter" characterName="resident1" x="0" y="13" />
+					<action type="startRoute" characterName="resident1"/> 
+					
+				<!-- We then set the path's for the second resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident2" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="addPointToRoute" characterName="resident2" x="4" y="3" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="0" y="3" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="0" y="0" delay="3"/>
+					<action type="teleportCharacter" characterName="resident2" x="0" y="0" />
+					<action type="startRoute" characterName="resident2"/>		
+			
+			</actions>
+		</startup>
+		
+		
+		<characters>
+			
+			<character name="goat">
+				<dialogue id="1" name="Goat" color="">
+					<option jumpId="2">
+						<text><![CDATA[Neah, neah NEAH!!!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="">
+						<text><![CDATA[Ouch!!!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="melonFarmer">
+				<dialogue id="1" name="Melon Farmer" color="">
+					<option jumpId="">
+						<text><![CDATA[I am a melon farmer. I want to trade my melons for grain in Mohenjo-Daro]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="goatWoman">
+				<dialogue id="1" name="Goat Woman" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello. Be careful of my goat – he is a bit grumpy. Sometimes he bites people! I’m taking him to my family in Lothal, but first we must stop at Mohenjo-Daro]]></text>
+						<actions>
+							<action type="setHintAndTips" slot="7" visible="true" progress="complete" text="Talk to the woman with the goat." />
+							<action type="setHintAndTips" slot="8" visible="true" progress="none" text="Talk to the ship's captain about going to Mohenjo-Daro" />
+							<action type="setProperty" propertyName="metGoatWoman" value="true" />
+							<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 90%"/>
+							<action type="updateGameProgress" progress="36" showPulse="true"/>
+						</actions>
+					</option>
+				</dialogue>	
+			</character>
+
+			<character name="captain">
+				<dialogue id="1" name="Captain" color="">
+					<option jumpId="">
+						<text><![CDATA[My boat sails to Mohenjo-Daro in an hour. I must get ready. Come back soon if you want to travel on my boat.]]></text>
+					</option>
+					<option jumpId="2">
+						<condition propertyName="metGoatWoman" value="true" />
+						<text><![CDATA[Hello. I am the captain of a boat going to Mohenjo-Daro. Would you like to come with us?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Yes! I need to go there to trade my coloured beads.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Captain" color="">
+					<option jumpId="4">
+						<text><![CDATA[That is a good idea. Coloured beads are valuable. Lots of people will want them in Mohenjo-Daro. .]]></text>
+					</option>
+				</dialogue>
+				
+				<dialogue id="4" name="Captain" color="">
+					<option jumpId="question">
+						<text><![CDATA[We have room for one other passenger – who should I take?]]></text>
+						<answers>
+							<answer jumpId="5">
+								<text><![CDATA[The melon farmer.]]></text>
+							</answer>
+							<answer jumpId="6">
+								<text><![CDATA[The goat woman.]]></text>
+							</answer>
+						</answers>
+					</option>
+				</dialogue>
+				<dialogue id="5" name="Captain" color="">
+					<option jumpId="">
+						<text><![CDATA[His melons will take up too much room! I will take the goat woman instead. All aboard for Mohenjo-Daro!]]></text>
+						<actions>
+							<action type="changeMap" location="mohenjo_daro" map="map1"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="6" name="Captain" color="">
+					<option jumpId="">
+						<text><![CDATA[Excellent suggestion. I shall take you and the goat woman with me. All aboard!]]></text>
+						<actions>
+							<action type="changeMap" location="mohenjo_daro" map="map1"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident1">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I’ve lost my dog! I think it’s run away!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident2">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Do you like my necklace? It’s made of gold!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+
+		</characters>
+	</script>
+</data>

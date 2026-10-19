@@ -1,0 +1,342 @@
+<data>
+	<map id="3" location="harrapa" />
+	<script>
+		<startup>
+			<actions>
+				
+				<!--  We then create the Non Playable Characters -->	
+					<action type="createNonPlayableCharacter" characterName="craftsman" definition="bbc.indusvalley.game.characters.npc.Man2" />
+					<action type="createNonPlayableCharacter" characterName="redStallTrader" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="createNonPlayableCharacter" characterName="greenStallTrader" definition="bbc.indusvalley.game.characters.npc.Man3" />
+					<action type="createNonPlayableCharacter" characterName="blueStallTrader" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader1" definition="bbc.indusvalley.game.characters.npc.Man4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader2" definition="bbc.indusvalley.game.characters.npc.Woman1" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader3" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader4" definition="bbc.indusvalley.game.characters.npc.Woman3" />
+					<action type="createNonPlayableCharacter" characterName="stallTrader5" definition="bbc.indusvalley.game.characters.npc.Man5" />
+					<action type="createNonPlayableCharacter" characterName="masterCraftsman" definition="bbc.indusvalley.game.characters.npc.Craftsman" />
+
+				<!-- We then position of the Non Playable Characters on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="1" y="2" />
+					<action type="teleportCharacter" characterName="masterCraftsman" x="2" y="2" />
+					<action type="teleportCharacter" characterName="craftsman" x="2" y="3" />
+					<action type="teleportCharacter" characterName="redStallTrader" x="5" y="14" />
+					<action type="teleportCharacter" characterName="greenStallTrader" x="8" y="2" />
+					<action type="teleportCharacter" characterName="blueStallTrader" x="8" y="10" />
+					<action type="teleportCharacter" characterName="stallTrader1" x="5" y="2" />
+					<action type="teleportCharacter" characterName="stallTrader2" x="5" y="6" />
+					<action type="teleportCharacter" characterName="stallTrader3" x="5" y="10" />
+					<action type="teleportCharacter" characterName="stallTrader4" x="8" y="6" />
+					<action type="teleportCharacter" characterName="stallTrader5" x="8" y="14" />
+				
+				<!--  We then direction of the Non Playable Characters will be facing on the map -->
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="craftsman" directionToFace="up"/>
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="redStallTrader" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader2" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader3" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="greenStallTrader" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="blueStallTrader" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader1" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="stallTrader4" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="stallTrader5" directionToFace="left"/>	
+					
+				<!-- We then update the tile on the map -->
+					<action type="updateMapTile" x="2" y="2" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="5" y="14" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="8" y="2" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="8" y="10" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="5" y="2" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="5" y="6" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="5" y="10" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="8" y="6" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="8" y="14" walkable="true" blocked="true" cost="999" />
+						
+				<!-- We then show the a cutscene -->	
+					<action type="updateGameProgress" progress="15" showPulse="false"/>
+					<action type="showCutscene" cutsceneName="cutscene03"/>
+
+				<!--  We then set the property flags for the dialog conversations -->
+					<action type="createProperty" propertyName="metRedStallTrader" value="false" />
+					<action type="createProperty" propertyName="metGreenStallTrader" value="false" />
+					<action type="createProperty" propertyName="metBlueStallTrader" value="false" />
+				
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="20" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 30%"/>
+					<action type="updateGameLocation" city="harrapa" location="You are currently in City of Harrapa market"/>		
+						
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="minerals" />
+					<action type="setInventory" slot="5" item="bread" />
+					<action type="setInventory" slot="6" item="empty" />
+					<action type="setInventory" slot="7" item="empty" />
+					<action type="setInventory" slot="8" item="empty" />
+					<action type="setInventory" slot="9" item="empty" />
+					<action type="setInventory" slot="10" item="empty" />
+					<action type="setInventory" slot="11" item="empty" />
+					<action type="setInventory" slot="12" item="empty" />
+					<action type="setInventory" slot="13" item="empty" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />		
+						
+							
+				<!-- We then setup the hint's and support panel information (Harrapa) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="complete" text="Speak to the trader outside the city." />
+					<action type="setHintAndTips" slot="2" visible="true" progress="complete" text="Speak to the gate keepers to enter the City of Harrapa." />
+					<action type="setHintAndTips" slot="3" visible="true" progress="complete" text="Someone near the well will be able to help you get to the market." />
+					<action type="setHintAndTips" slot="4" visible="true" progress="none" text="Talk to the trader at the red market stall." />
+					<action type="setHintAndTips" slot="5" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="6" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="7" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />
+
+				<!-- We then pause to make it look like the craftsman is speaking to the master craftsman and then he will come and talk to the hero -->
+					<action type="delayForDuration" duration="2"/>
+					<action type="characterGotoTile" characterName="craftsman" x="1" y="3" />
+					<action type="characterChangeDirection" characterName="craftsman" directionToFace="up"/>
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="left"/>
+					<action type="characterConversation" characterName="craftsman" />
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="down"/>
+					<action type="characterGotoTile" characterName="craftsman" x="1" y="9" />
+					<action type="removeNonPlayableCharacter" characterName="craftsman"/>
+					
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="22" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 40%"/>		
+
+				<!-- We then set the path's for the first resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident1" definition="bbc.indusvalley.game.characters.npc.Woman4" />
+					<action type="addPointToRoute" characterName="resident1" x="12" y="6" delay="3"/>
+					<action type="addPointToRoute" characterName="resident1" x="11" y="1" delay="3"/>
+					<action type="teleportCharacter" characterName="resident1" x="11" y="1" />
+					<action type="startRoute" characterName="resident1"/> 
+					
+				<!-- We then set the path's for the second resident to move around the map -->
+					<action type="createNonPlayableCharacter" characterName="resident2" definition="bbc.indusvalley.game.characters.npc.Woman2" />
+					<action type="addPointToRoute" characterName="resident2" x="12" y="14" delay="3"/>
+					<action type="addPointToRoute" characterName="resident2" x="11" y="8" delay="3"/>
+					<action type="teleportCharacter" characterName="resident2" x="12" y="14" />
+					<action type="startRoute" characterName="resident2"/>
+					
+				<!-- We then set the path's for the third resident to move around the map --> 
+					<action type="createNonPlayableCharacter" characterName="resident3" definition="bbc.indusvalley.game.characters.npc.Man5" />
+					<action type="addPointToRoute" characterName="resident3" x="2" y="9" delay="3"/>
+					<action type="addPointToRoute" characterName="resident3" x="1" y="13" delay="3"/>
+					<action type="teleportCharacter" characterName="resident3" x="1" y="13" />
+					<action type="startRoute" characterName="resident3"/>
+
+			</actions>
+		</startup>
+		<characters>
+
+			<character name="craftsman">
+				<dialogue id="1" name="Craftsman" color="">
+					<option jumpId="2">
+						<text><![CDATA[Welcome to the market. What do you have to trade?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[I have valuable minerals. And my friend the master knows the secret of making extra-hard mud bricks in kilns!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Craftsman" color="">
+					<option jumpId="">
+						<text><![CDATA[Wonderful! Start by talking to my friend with the red market stall. She will know who is interested in what you have. And take some grapes if you like. It's hot!]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="redStallTrader">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="2">
+						<text><![CDATA[Hello. What trade goods do you have?]]></text>
+						<actions>
+							<action type="setHintAndTips" slot="4" visible="true" progress="complete" text="Talk to the trader at the red market stall." />
+							<action type="setHintAndTips" slot="5" visible="true" progress="none" text="Talk to the trader at the green market stall." />
+							<action type="setProperty" propertyName="metRedStallTrader" value="true" />
+							<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 50%"/>
+							<action type="updateGameProgress" progress="24" showPulse="true"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Minerals. And my friend knows how to make the hardest bricks anyone has ever seen!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[That is good. Go to my friend on the green market stall. He and his family are brick-makers, so he will be interested in your knowledge.]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="greenStallTrader">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I am busy. Come back later.]]></text>
+					</option>
+					<option jumpId="2">
+						<condition propertyName="metRedStallTrader" value="true" />
+						<text><![CDATA[Welcome. Are you a trader?]]></text>
+						<actions>
+							<action type="setHintAndTips" slot="5" visible="true" progress="complete" text="Talk to the trader at the green market stall." />
+							<action type="setHintAndTips" slot="6" visible="true" progress="none" text="Talk to the trader at the blue market stall." />
+							<action type="setProperty" propertyName="metGreenStallTrader" value="true" />
+							<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 60%"/>
+							<action type="updateGameProgress" progress="26" showPulse="true"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Yes. The woman on the red market stall sent me. I have minerals. And my friend the master knows how to make extra-hard mud bricks.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="{HUMAN}" color="">
+					<option jumpId="4">
+						<text><![CDATA[He says you must mix lots of straw with the mud. And the fire to heat the kiln must be extra-hot. So use lots of firewood!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Thank you - that will be useful. In return, I will introduce you to my friend on the blue stall. Talk to him - say I sent you - and he will trade with you.]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="blueStallTrader">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I am eating my lunch. Leave me alone.]]></text>
+					</option>
+					<option jumpId="2">
+						<condition propertyName="metRedStallTrader" value="true" />
+						<condition propertyName="metGreenStallTrader" value="true" />
+						<text><![CDATA[Hello. What do you have to trade?]]></text>
+						<actions>
+							<action type="setProperty" propertyName="metBlueStallTrader" value="true" />
+							<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 70%"/>
+							<action type="updateGameProgress" progress="28" showPulse="true"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Your friend on the green stall sent me. I have minerals with lots of precious stones.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Stall Trader" color="">
+					<option jumpId="4">
+						<text><![CDATA[I need precious stones! I am making necklaces for a party! I will give you ten strings of coloured beads in return.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="{HUMAN}" color="">
+					<option jumpId="5">
+						<text><![CDATA[That is not enough.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="5" name="Stall Trader" color="">
+					<option jumpId="6">
+						<text><![CDATA[You can have meat and fish as well. And my tiger seal of course - it is my personal business mark!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="6" name="{HUMAN}" color="">
+					<option jumpId="">
+						<text><![CDATA[It's a deal!]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map4"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+			
+			
+			<character name="stallTrader1">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[You’re a trader, aren’t you? You look like you have travelled a long way.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader2">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[I’m hungry! I may have some dates and bread for my lunch now, come back later.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader3">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Did you travel to Harappa by Ox? It would have been a long way to travel from your village on foot!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader4">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello trader, maybe we can trade later?]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="stallTrader5">
+				<dialogue id="1" name="Stall Trader" color="">
+					<option jumpId="">
+						<text><![CDATA[It’s very hot today isn't it? It is hot even in the shade or my stall.]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident1">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I’m on my way to meet my rich friend. He has a very big house – 20 rooms! And a bathroom – with a toilet!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident2">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Have you seen my cooking pot? I’m sure I left it here somewhere!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="resident3">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I’ve just been to a special ceremony to thank the gods for the grain harvest. It was very exciting!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+			<character name="masterCraftsman">
+				<dialogue id="1" name="Master Craftsman" color="">
+					<option jumpId="">
+						<text><![CDATA[Hello friend! I think we should try talking to the market stall owners, until we find one who is able to trade with us.]]></text>
+					</option>
+				</dialogue>
+			</character>	
+		
+		</characters>
+	</script>
+</data>

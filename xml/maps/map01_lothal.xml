@@ -1,0 +1,142 @@
+<data>
+	<map id="1" location="lothal" />
+	<script>
+    
+    
+		<startup>
+			<actions>
+				
+				<!--  We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="gateKeeper1" definition="bbc.indusvalley.game.characters.npc.GateKeeper1" />
+					<action type="createNonPlayableCharacter" characterName="chiefGateKeeper" definition="bbc.indusvalley.game.characters.npc.GateKeeper3" />
+
+				<!--  We then set the position on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="15" y="5" />
+					<action type="teleportCharacter" characterName="gateKeeper1" x="1" y="11" />
+					<action type="teleportCharacter" characterName="chiefGateKeeper" x="1" y="14" />
+					
+				<!--  We then set the direction they will be facing on the map -->	
+					<action type="characterChangeDirection" characterName="gateKeeper1" directionToFace="right"/>
+					<action type="characterChangeDirection" characterName="chiefGateKeeper" directionToFace="down"/>	
+				
+				<!--  We then update the tile on the map -->
+					<action type="updateMapTile" x="1" y="11" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="1" y="14" walkable="true" blocked="true" cost="999" />
+				
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="75" showPulse="false"/>
+					<action type="showCutscene" cutsceneName="cutscene09" />
+
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="80" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Lothal is 0%"/>
+					<action type="updateGameLocation" city="lothal" location="You are currently at the City of Lothal docks"/>		
+				
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="bread" />
+					<action type="setInventory" slot="5" item="tigerSeal" />
+					<action type="setInventory" slot="6" item="meat" />
+					<action type="setInventory" slot="7" item="goatPoo" />
+					<action type="setInventory" slot="8" item="rhinoSeal" />
+					<action type="setInventory" slot="9" item="knife"/>
+					<action type="setInventory" slot="10" item="bangles" />
+					<action type="setInventory" slot="11" item="unicornSeal" />
+					<action type="setInventory" slot="12" item="stones" />
+					<action type="setInventory" slot="13" item="traderSeal" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />
+					
+				<!-- We then setup the hint's and support panel information (Lothal) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="none" text="Talk to the gate keepers to enter the City of Lothal." />	
+					<action type="setHintAndTips" slot="2" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="3" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="4" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="5" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="6" visible="false" progress="none" text="" />		
+					<action type="setHintAndTips" slot="7" visible="false" progress="none" text="" />		
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />	
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />			
+
+			</actions>
+		</startup>
+        
+        
+		<characters>
+
+			<character name="gateKeeper1">
+				<dialogue id="1" name="Gatekeeper" color="">
+					<option jumpId="2">
+						<text><![CDATA[Are you here to enter our city? Or are you passing down the River?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[I would like to enter, if I may.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Then find the chief gatekeeper! It will be his decision!]]></text>
+					</option>
+				</dialogue>
+			</character>
+			
+
+			<character name="chiefGateKeeper">
+				<dialogue id="1" name="Gatekeeper" color="">
+					<option jumpId="2">
+						<text><![CDATA[ Who goes there? Who dares approach the busy port-city of Lothal?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[I am a trader from the north. I have been to Harappa and Mohenjo-Daro – and now I wish to enter Lothal.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Gatekeeper" color="">
+					<option jumpId="4">
+						<text><![CDATA[Bah! Those other cities are nothing, compared to Lothal!]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="Gatekeeper" color="">
+					<option jumpId="question">
+						<text><![CDATA[I am the chief gatekeeper of Lothal! If you wish to enter Lothal, you must first tell me why!]]></text>
+						<answers>
+							<answer jumpId="5">
+								<text><![CDATA[I have copper goods to trade – a knife, and some bangles.]]></text>
+							</answer>
+							<answer jumpId="6">
+								<text><![CDATA[I am on a mission to the west – and I have to find the overseas trader.]]></text>
+							</answer>
+						</answers>
+					</option>
+				</dialogue>
+				<dialogue id="5" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[Huh! Another trader, with the same old stuff. I had hoped you would bring something new and interesting. But you may enter…]]></text>
+						<actions>
+							<action type="changeMap" location="lothal" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="6" name="Gatekeeper" color="">
+					<option jumpId="">
+						<text><![CDATA[ A mission to the west! That sounds exciting! Enter!]]></text>
+						<actions>
+							<action type="changeMap" location="lothal" map="map2"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+
+		</characters>
+	</script>
+</data>

@@ -1,0 +1,196 @@
+<data>
+	<map id="2" location="harrapa" />
+	<script>
+		<startup>
+			<actions>
+
+				<!--  We then create the Non Playable Characters -->
+					<action type="createNonPlayableCharacter" characterName="resident1" definition="bbc.indusvalley.game.characters.npc.Man1" />
+					<action type="createNonPlayableCharacter" characterName="resident2" definition="bbc.indusvalley.game.characters.npc.Woman1" />
+					<action type="createNonPlayableCharacter" characterName="resident3" definition="bbc.indusvalley.game.characters.npc.Man3" />
+					<action type="createNonPlayableCharacter" characterName="masterCraftsman" definition="bbc.indusvalley.game.characters.npc.Craftsman" />
+
+				<!-- We then position of the Non Playable Characters on the map -->
+					<action type="teleportCharacter" characterName="{HUMAN}" x="5" y="9" />
+					<action type="teleportCharacter" characterName="resident1" x="7" y="7" />
+					<action type="teleportCharacter" characterName="resident2" x="1" y="1" />
+					<action type="teleportCharacter" characterName="resident3" x="6" y="3" />
+					<action type="teleportCharacter" characterName="masterCraftsman" x="6" y="9" />
+
+				<!-- We then direction of the Non Playable Characters will be facing on the map -->
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="up"/>
+					<action type="characterChangeDirection" characterName="resident1" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="resident2" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="resident3" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="up"/>
+
+				<!-- We then update the tile on the map -->
+					<action type="updateMapTile" x="6" y="3" walkable="true" blocked="true" cost="999" />
+					<action type="updateMapTile" x="6" y="9" walkable="true" blocked="true" cost="999" />
+
+				<!-- We then show the a cutscene -->
+					<action type="updateGameProgress" progress="5" showPulse="false"/>
+					<action type="showCutscene" cutsceneName="cutscene02" />
+
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="10" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 10%"/>
+					<action type="updateGameLocation" city="harrapa" location="You are currently near the well in the City of Harrapa"/>
+
+				<!-- Setting up items in the inventory -->
+					<action type="setInventory" slot="1" item="elephantSeal" />
+					<action type="setInventory" slot="2" item="waterBags" />
+					<action type="setInventory" slot="3" item="fruit" />
+					<action type="setInventory" slot="4" item="minerals" />
+					<action type="setInventory" slot="5" item="bread" />
+					<action type="setInventory" slot="6" item="empty" />
+					<action type="setInventory" slot="7" item="empty" />
+					<action type="setInventory" slot="8" item="empty" />
+					<action type="setInventory" slot="9" item="empty" />
+					<action type="setInventory" slot="10" item="empty" />
+					<action type="setInventory" slot="11" item="empty" />
+					<action type="setInventory" slot="12" item="empty" />
+					<action type="setInventory" slot="13" item="empty" />
+					<action type="setInventory" slot="14" item="empty" />
+					<action type="setInventory" slot="15" item="empty" />
+					<action type="setInventory" slot="16" item="empty" />
+					<action type="setInventory" slot="17" item="empty" />
+					<action type="setInventory" slot="18" item="empty" />
+					<action type="setInventory" slot="19" item="empty" />
+					<action type="setInventory" slot="20" item="empty" />
+
+				<!-- We then setup the hint's and support panel information (Harrapa) -->
+					<action type="setHintAndTips" slot="1" visible="true" progress="complete" text="Speak to the trader outside the city." />
+					<action type="setHintAndTips" slot="2" visible="true" progress="complete" text="Speak to the gate keepers to enter the City of Harrapa." />
+					<action type="setHintAndTips" slot="3" visible="true" progress="none" text="Someone near the well will be able to help you get to the market." />
+					<action type="setHintAndTips" slot="4" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="5" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="6" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="7" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="8" visible="false" progress="none" text="" />
+					<action type="setHintAndTips" slot="9" visible="false" progress="none" text="" />
+
+				<!-- We then pause to make it look like the resident is speaking to the master craftsman and then he will come and talk to the hero -->
+					<action type="delayForDuration" duration="2"/>
+					<action type="characterGotoTile" characterName="resident1" x="5" y="8" />
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="resident1" directionToFace="down"/>
+					<action type="characterChangeDirection" characterName="{HUMAN}" directionToFace="up"/>
+					<action type="characterConversation" characterName="resident1" />
+					<action type="characterGotoTile" characterName="resident1" x="7" y="7" />
+					<action type="updateMapTile" x="7" y="7" walkable="true" blocked="true" cost="999" />
+					<action type="characterChangeDirection" characterName="resident1" directionToFace="left"/>
+					<action type="characterChangeDirection" characterName="masterCraftsman" directionToFace="up"/>
+
+				<!-- We then handling updating the players progress through the game -->
+					<action type="updateGameProgress" progress="15" showPulse="true"/>
+					<action type="updateMissionProgress" text="Your progress through the City of Harrapa is 20%"/>
+
+				<!-- We then set the path's for the first resident to move around the map -->
+					<action type="addPointToRoute" characterName="resident2" x="3" y="8" delay="0"/>
+					<action type="addPointToRoute" characterName="resident2" x="4" y="2" delay="0"/>
+					<action type="addPointToRoute" characterName="resident2" x="2" y="2" delay="0"/>
+					<action type="startRoute" characterName="resident2"/>
+
+
+			</actions>
+		</startup>
+		<characters>
+
+			<character name="resident1">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="2">
+						<text><![CDATA[Hello. You and your friend look like strangers . You must come from far away.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[I am a trader. I want to find the market. Do you know where it is?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[No, I don't. Sorry. I come from another city. You must ask someone else.]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="resident2">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="2">
+						<text><![CDATA[I like coming to the well. People gather here to share news and talk.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Can you tell me where the market is?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[I'm sorry, I must go now, my children are waiting for me.]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="resident3">
+				<dialogue id="1" name="Resident" color="">
+					<option jumpId="question">
+						<text><![CDATA[Would you and your friend like a drink? I can lower this bucket on a rope to fill it up. And then you can drink all you want!]]></text>
+						<answers>
+							<answer jumpId="2">
+								<text><![CDATA[Yes please!]]></text>
+							</answer>
+							<answer jumpId="2">
+								<text><![CDATA[No, thank you.]]></text>
+							</answer>
+						</answers>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="{HUMAN}" color="">
+					<option jumpId="3">
+						<text><![CDATA[Can you tell me where the market is?]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[It's down the road. Let's go there now.]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map3"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="3" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[OK - but make sure you have a drink soon. It's very hot! I'm off to the market now - it's just down the road. You can come too.]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map3"/>
+						</actions>
+					</option>
+				</dialogue>
+				<dialogue id="4" name="Resident" color="">
+					<option jumpId="">
+						<text><![CDATA[Of course! It's just down the road.]]></text>
+						<actions>
+							<action type="changeMap" location="harappa" map="map3"/>
+						</actions>
+					</option>
+				</dialogue>
+			</character>
+
+			<character name="masterCraftsman">
+				<dialogue id="1" name="Master Craftsman" color="">
+					<option jumpId="2">
+						<text><![CDATA[We've made it into Harappa friend! The gatekeeper said that we should try talking to someone near the well.]]></text>
+					</option>
+				</dialogue>
+				<dialogue id="2" name="Master Craftsman" color="">
+					<option jumpId="">
+						<text><![CDATA[Maybe they they will be able to help us to find our way to the market?]]></text>
+					</option>
+				</dialogue>
+			</character>
+
+		</characters>
+	</script>
+</data>
